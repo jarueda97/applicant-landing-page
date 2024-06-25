@@ -3,59 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apply for a Position</title>
+    <title>Apply for a Position - Accounting BPO</title>
     <style>
+        :root {
+            --primary-color: #1a3a6c;  /* Navy blue */
+            --secondary-color: #f0f0f0;  /* Light gray */
+            --accent-color: #d4af37;  /* Gold */
+            --text-color: #333333;
+            --button-color: #2c5234;  /* Dark green */
+        }
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 20px;
-            background-color: #f4f4f4;
+            background-color: var(--secondary-color);
+            color: var(--text-color);
         }
         .container {
             max-width: 600px;
             margin: auto;
             background: white;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            border-top: 5px solid var(--primary-color);
+        }
+        .logo {
+            display: block;
+            margin: 0 auto 20px;
+            max-width: 200px;
+            height: auto;
         }
         h1 {
             text-align: center;
-            color: #333;
+            color: var(--primary-color);
+            margin-bottom: 30px;
         }
         form {
             display: flex;
             flex-direction: column;
         }
         label {
-            margin-top: 10px;
+            margin-top: 15px;
+            color: var(--primary-color);
+            font-weight: bold;
         }
-        input, button {
+        input {
             margin-top: 5px;
-            padding: 10px;
+            padding: 12px;
             border: 1px solid #ddd;
             border-radius: 4px;
+            font-size: 16px;
         }
         button {
-            background-color: #4CAF50;
+            background-color: var(--button-color);
             color: white;
             border: none;
+            padding: 12px;
+            font-size: 18px;
+            border-radius: 4px;
             cursor: pointer;
-            margin-top: 20px;
+            margin-top: 25px;
+            transition: background-color 0.3s ease;
         }
         button:hover {
-            background-color: #45a049;
+            background-color: #3a6b44;
         }
         .instructions {
-            margin-top: 20px;
+            margin-top: 25px;
             font-style: italic;
-            color: #666;
+            color: var(--text-color);
+            background-color: #e6e6e6;
+            padding: 15px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+        .instructions a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .instructions a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <img src="path/to/your/logo.png" alt="Company Logo" class="logo">
         <h1>Apply for a Position</h1>
         <form action="https://formspree.io/f/xnnaalzg" method="POST">
             <label for="name">Full Name:</label>
