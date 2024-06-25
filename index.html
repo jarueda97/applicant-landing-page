@@ -5,26 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Upload Your CV</title>
     <style>
-   </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Upload Your CV</h1>
-        <form action="https://formspree.io/f/xnnaalzg" method="POST" enctype="multipart/form-data">
-            <label for="name">Full Name:</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="cv">Upload CV (PDF format):</label>
-            <input type="file" id="cv" name="cv" accept=".pdf" required>
-            
-            <button type="submit">Submit Application</button>
-        </form>
-    </div>
-</body>
-</html>
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
@@ -72,7 +52,7 @@
 <body>
     <div class="container">
         <h1>Upload Your CV</h1>
-        <form id="application-form">
+        <form action="https://formspree.io/f/xnnaalzg" method="POST" enctype="multipart/form-data">
             <label for="name">Full Name:</label>
             <input type="text" id="name" name="name" required>
             
@@ -84,18 +64,6 @@
             
             <button type="submit">Submit Application</button>
         </form>
-        <p id="submission-message" style="display:none; text-align:center; margin-top:20px;"></p>
     </div>
-
-    <script>
-        document.getElementById('application-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            // Here you would typically send the form data to a server
-            // For this demo, we'll just show a thank you message
-            document.getElementById('submission-message').textContent = 'Thank you for your application! We will be in touch soon.';
-            document.getElementById('submission-message').style.display = 'block';
-            this.reset();
-        });
-    </script>
 </body>
 </html>
